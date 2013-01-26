@@ -82,12 +82,9 @@ public class Calc extends JFrame {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
-		this.setIconImage(getToolkit().getImage("resource/icon.png")); // changer
-																		// l'icon
-																		// par
-																		// defaut
-																		// de
-																		// JFram
+		
+		// changer l'icon par defaut de JFram
+		this.setIconImage(getToolkit().getImage("resource/icon.png"));
 		this.getContentPane().setLayout(new BorderLayout());
 
 		// Menu
@@ -508,24 +505,21 @@ public class Calc extends JFrame {
 	// *************************************************************************************
 	public void affichageResultat(double resultat) {
 		String str = String.valueOf(resultat);
-		if (str.length() > 15) // afficher seulement 15 numéros
-		{
+		// afficher seulement 15 numéros
+		if (str.length() > 15) {
 			str = str.substring(0, 15);
 		}
-
-		if (str.indexOf(".0") == str.length() - 2) // enlever le .0 dans la fin
-													// du numéros
-		{
+		// enlever le .0 dans la fin du numéros
+		if (str.indexOf(".0") == str.length() - 2) {
 			str = str.substring(0, str.length() - 2);
 		}
-
 		txt.setText(str);
 	}
 
 	// Fonction pour la récuperation de la valeur du Textfield .
 	// *************************************************************************************
 	public double getValeur() {
-		if (! txt.getText().isEmpty()) {
+		if (!txt.getText().isEmpty()) {
 			return Double.valueOf(txt.getText());
 		}
 		return 0;
