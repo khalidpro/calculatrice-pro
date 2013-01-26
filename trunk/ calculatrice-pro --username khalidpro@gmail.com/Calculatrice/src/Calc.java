@@ -484,9 +484,9 @@ public class Calc extends JFrame {
 				if (B2NDF) {
 					resultat = Math.pow(10, getValeur());
 				} else {
-					double x=getValeur();
+					double x = getValeur();
 					while (--x > 0) {
-						resultat=resultat*x;
+						resultat = resultat * x;
 					}
 				}
 				affichageResultat(resultat);
@@ -525,7 +525,7 @@ public class Calc extends JFrame {
 	// Fonction pour la récuperation de la valeur du Textfield .
 	// *************************************************************************************
 	public double getValeur() {
-		if (txt.getText() != "") {
+		if (! txt.getText().isEmpty()) {
 			return Double.valueOf(txt.getText());
 		}
 		return 0;
