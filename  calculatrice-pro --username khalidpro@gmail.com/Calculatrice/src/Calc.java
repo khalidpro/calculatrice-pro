@@ -522,7 +522,7 @@ public class Calc extends JFrame {
 		txt.setText(str);
 	}
 
-	// Fonction pour la récuperation de la valeur du Textfield
+	// Fonction pour la récuperation de la valeur du Textfield .
 	// *************************************************************************************
 	public double getValeur() {
 		if (txt.getText() != "") {
